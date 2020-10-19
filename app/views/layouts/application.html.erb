@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FirstApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ 
+</head>
+
+<body class="is-preload">
+
+  <body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><%= link_to 'Index', pages_index_path %></li> <!--pages hace referencia a pages/index.html  -->
+              <li><%= link_to 'About', pages_about_path %></li> <!--pages hace referencia a pages/about.html  -->
+              <li><%= link_to 'Team', pages_team_path %></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<%= yield %>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+              <ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li>
+              </ul>
+            </div>
+					</footer>
+
+			</div>
+							
+
+  <!-- <%= link_to 'About', pages_about_path %> pages hace referencia a pages/index.html 
+  <%= link_to 'Index', pages_index_path %> pages hace referencia a pages/about.html 
+  <%= link_to 'Team', pages_team_path %> -->
+  
+
+</body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</html>
